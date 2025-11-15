@@ -39,7 +39,7 @@ function displayCard(myData) {
             <div class="${className}">
                 ${i < 1 ? `<h2>${countryName}</h2>` : ''}
                 <h3>${infos.dayindex}</h3>
-                ${i < 1 ? `<h3>${infos.monthindex}</h3>` : ''}
+              
                 <p class="temp-${className}">${i < 1 ? myData.current.temp_c : forecastDiv[i].day.avgtemp_c}°C</p>
                 <img src="${i < 1 ? myData.current.condition.icon : forecastDiv[i].day.condition.icon}" alt="weather icon">
                 <p class="condition">${i < 1 ? myData.current.condition.text : forecastDiv[i].day.condition.text}</p>

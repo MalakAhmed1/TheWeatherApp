@@ -38,10 +38,10 @@
 }
 
 .search-container button {
-    background: rgb(46, 92, 95);
+    background: rgba(181, 245, 255, 0.637);
     ;
     border: none;
-    color: white;
+    color:  rgba(46, 92, 95, 0.637);
     padding: 10px 25px;
     border-radius: 30px;
     cursor: pointer;
@@ -53,16 +53,79 @@
     opacity: 0.8;
 }
 
-.forecast-cards {
+/* .forecast-cards {
     display: flex;
     justify-content: center;
     background-color: rgba(46, 92, 95, 0.692);
     max-width: 900px;
     margin: 60px auto 60px;
     gap: 180px;
-    padding: 120px;
+    padding: 60px;
     border-radius: 40px;
     border: 0.5px solid rgb(31, 72, 75);
+} */
+ .forecast-cards {
+  position: relative;               
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  gap: 24px;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 48px;                     
+  border-radius: 40px;
+  background: linear-gradient(
+    90deg,
+    rgba(12,60,63,0.82) 0% 33.333%,
+    rgba(18,90,94,0.64) 33.333% 66.666%,
+    rgba(21,110,112,0.48) 66.666% 100%
+  );
+
+  border: 1px solid rgba(0,0,0,0.25);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5) inset, 0 8px 30px rgba(0,0,0,0.45);
+}
+
+.forecast-cards::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      to right,
+      transparent 0%,
+      transparent 33.3%,
+      rgba(255,255,255,0.04) 33.3%,
+      rgba(255,255,255,0.04) 33.6%,
+      transparent 33.6% 66.6%,
+      rgba(255,255,255,0.04) 66.6%,
+      rgba(255,255,255,0.04) 66.9%,
+      transparent 66.9% 100%
+    );
+  mix-blend-mode: overlay; 
+  border-radius: inherit;
+}
+
+.forecast-cards > * {
+  background: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.forecast-cards > * { padding: 8px 12px; }
+
+@media (max-width: 860px) {
+  .forecast-cards {
+    grid-template-columns: 1fr;
+    padding: 28px;
+  }
+
+  .forecast-cards::after { 
+    background: none;
+  }
 }
 
 .left {
@@ -90,8 +153,11 @@
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: center;
-    padding: 20px 0px;
+    padding: 20px;
     background-color: rgb(46, 92, 95);
     color: white;
     font-family: "Inter", sans-serif;
@@ -104,4 +170,7 @@ body {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+}
+.left h3{
+    display: flex;
 }
