@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.top{
+.top {
     text-align: center;
     padding: 20px;
     color: rgb(169, 200, 202);
@@ -12,18 +12,18 @@
     font-family: "Playfair Display", serif;
 }
 
-.top h1{
+.top h1 {
     margin-bottom: 20px;
 }
 
-.search-container{
+.search-container {
     display: flex;
     align-items: center;
-    background-color: rgba(46, 92, 95, 0.637); 
+    background-color: rgba(46, 92, 95, 0.637);
     padding: 10px 15px;
     border-radius: 40px;
-    max-width: 900px; 
-    margin: auto;  
+    max-width: 900px;
+    margin: auto;
     margin-top: 30px;
 }
 
@@ -32,13 +32,14 @@
     background: transparent;
     border: none;
     outline: none;
-    color:white;
+    color: white;
     font-size: 16px;
     padding: 10px;
 }
 
 .search-container button {
-    background: rgb(46, 92, 95);;  
+    background: rgb(46, 92, 95);
+    ;
     border: none;
     color: white;
     padding: 10px 25px;
@@ -51,51 +52,56 @@
 .search-container button:hover {
     opacity: 0.8;
 }
-.forecast-cards{
+
+.forecast-cards {
     display: flex;
     justify-content: center;
     background-color: rgba(46, 92, 95, 0.692);
     max-width: 900px;
     margin: 60px auto 60px;
     gap: 180px;
-    padding : 120px;
+    padding: 120px;
     border-radius: 40px;
-    border:0.5px solid rgb(31, 72, 75);
+    border: 0.5px solid rgb(31, 72, 75);
 }
-.left{
+
+.left {
     flex: 2;
     text-align: center;
 }
-.left h2{
-   font-family: "Playfair Display", serif;
-   font-size: 30px;
-   margin-bottom: 20px;
-   color: rgb(255, 255, 255);
-}
-.forecast-cards h3{
+
+.left h2 , .forecast-cards h3 ,.forecast-cards p{
     font-family: "Playfair Display", serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.forecast-cards h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color:  rgb(255, 255, 255);
 }
-.forecast-cards p{
+
+.forecast-cards p {
     font-family: "Inter", sans-serif;
     font-size: 20px;
-    color: rgb(255, 255, 255);
+    color: white;
     margin-bottom: 10px;
 }
-footer{
+
+footer {
     text-align: center;
-    padding: 15px;
+    padding: 20px 0px;
     background-color: rgb(46, 92, 95);
     color: white;
     font-family: "Inter", sans-serif;
 }
-body{
-    background-image: 
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-    url('images/forecast.jpeg');
+
+body {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url('images/forecast.jpeg');
     background-size: cover;
-    background-position: center top;  
+    background-position: center top;
     background-repeat: no-repeat;
 }
